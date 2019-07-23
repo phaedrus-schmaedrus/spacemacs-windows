@@ -317,6 +317,13 @@ you should place your code here."
            ;; Change this with your path to MSYS bin directory
            "C:\\MinGW\\msys\\1.0\\bin;"
            (getenv "PATH")))
+
+  (defun run-powershell ()
+    "Run powershell"
+    (interactive)
+    (async-shell-command "c:/windows/system32/windowspowershell/v1.0/powershell.exe -Command -"
+                         nil
+                         nil))
  )
 
 ;; Do not write anything past this comment. This is where Emacs will
