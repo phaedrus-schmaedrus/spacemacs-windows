@@ -339,6 +339,8 @@ you should place your code here."
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
  '(evil-want-Y-yank-to-eol nil)
+ '(explicit-shell-file-name
+   "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command -")
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-symbol-colors
    (--map
@@ -362,7 +364,7 @@ you should place your code here."
  '(hl-fg-colors
    (quote
     ("#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3")))
- '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")) t)
+ '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
  '(magit-diff-use-overlays nil)
  '(nrepl-message-colors
    (quote
