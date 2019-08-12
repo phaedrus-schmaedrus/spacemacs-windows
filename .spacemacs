@@ -333,12 +333,13 @@ you should place your code here."
     (spacemacs/set-leader-keys-for-major-mode 'org-mode ":" 'org-set-tags-command)
 )
 
-  (org-todo-keywords (quote ((sequence "TODO" "PAUS" | "DONE" "ABDN"))))
+  (setq org-todo-keywords
+        '((sequence "TODO" "PAUS" "|" "DONE" "ABDN")))
   (setq org-todo-keyword-faces
-          ("PAUS" . "white")
+         '("PAUS" . (:foreground "white" :weight bold))
           ("ABDN" . "blue")
- )
-
+)
+)
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
