@@ -331,6 +331,9 @@ you should place your code here."
 
   (setq org-agenda-files '("z:/Private/jules/orgfiles/daily_todo"))
 
+  (setq org-todo-keywords
+        '((sequence "TODO" "STRT" "PAUS" "|" "DONE" "ABDN")))
+
 )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
