@@ -121,7 +121,8 @@ values."
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
    dotspacemacs-startup-lists '((recents . 5)
-                                (projects . 7))
+                                (agenda . 7)
+                                )
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
    ;; Default major mode of the scratch buffer (default `text-mode')
@@ -263,7 +264,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -329,6 +330,7 @@ you should place your code here."
                          nil
                          nil))
 
+;; org-mode customizations
   (setq org-agenda-files '("z:/Private/jules/orgfiles/daily_todo"))
 
   (setq org-todo-keywords
@@ -340,6 +342,11 @@ you should place your code here."
           ("PAUS" . "lightblue")
           ("DONE" . org-done)
           ("ABDN" . "grey")))
+
+  (with-eval-after-load 'org
+    (setq org-startup-indented t) ; Enable `org-indent-mode' by default
+    (add-hook 'org-mode-hook #'visual-line-mode) ; Enable visual line mode in org by default
+    )
 
 )
 ;; Do not write anything past this comment. This is where Emacs will
