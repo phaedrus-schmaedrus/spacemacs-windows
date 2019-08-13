@@ -350,6 +350,10 @@ you should place your code here."
 
   (load-file "~/.spacemacs-tags.el")
 
+  (with-eval-after-load 'org
+    ;; Replace org-set-tags with org-set-tags-command in keybinding
+    (spacemacs/set-leader-keys-for-major-mode 'org-mode ":" 'org-set-tags-command))
+
 )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
