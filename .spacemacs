@@ -334,6 +334,13 @@ you should place your code here."
   (setq org-todo-keywords
         '((sequence "TODO" "STRT" "PAUS" "|" "DONE" "ABDN")))
 
+  (setq org-todo-keyword-faces
+        '(("TODO" . org-todo)
+          ("STRT" . "yellow")
+          ("PAUS" . "lightblue")
+          ("DONE" . org-done)
+          ("ABDN" . "grey")))
+
 )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
