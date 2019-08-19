@@ -389,6 +389,9 @@ you should place your code here."
   ;; auto-disable hl-todo-mode
   (add-hook 'org-mode-hook (lambda () (hl-todo-mode -1)))
 
+  (setq org-clock-persist 'history)
+  (org-clock-persistence-insinuate)
+
 )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
