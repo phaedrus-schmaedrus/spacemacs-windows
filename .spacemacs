@@ -341,6 +341,9 @@ you should place your code here."
       "STRT(s)"
       "PAUS(p)"
       "DELG(e)"
+      "PROJ(r)"
+      "STDY(y)"
+      "APPT(o)"
       "|"
       "DONE(d)"
       "ABDN(a)"
@@ -382,6 +385,9 @@ you should place your code here."
 
   ;; set org to allow the creation of new parent notes, confirm before creating
   (setq org-refile-allow-creating-parent-nodes 'confirm)
+
+  ;; auto-disable hl-todo-mode
+  (add-hook 'org-mode-hook (lambda () (hl-todo-mode -1)))
 
 )
 ;; Do not write anything past this comment. This is where Emacs will
