@@ -335,16 +335,32 @@ you should place your code here."
   (setq org-agenda-files '("z:/Private/jules/orgfiles/"))
 
   (setq org-todo-keywords
-        '((sequence "TODO" "STRT" "PAUS" "|" "DONE" "ABDN")))
+  '((sequence "TODO(t)"
+      "MAYB(m)"
+      "NEXT(n)"
+      "STRT(s)"
+      "PAUS(p)"
+      "DELG(e)"
+      "|"
+      "DONE(d)"
+      "ABDN(a)"
+      "CANC(c)")))
 
   (setq org-todo-keyword-faces
-        '(("TODO" . org-todo)
-          ("STRT" . "yellow")
-          ("PAUS" . "lightblue")
-          ("DONE" . org-done)
-          ("ABDN" . "grey")))
+    '(("PROJ" :background "blue" :foreground "black" :weight bold :box (:line-width 2 :style released-button)) 
+      ("STDY" :background "blue" :foreground "black" :weight bold :box (:line-width 2 :style released-button)) 
+      ("TODO" :background "orange" :foreground "black" :weight bold :box (:line-width 2 :style released-button))
+      ("NEXT" :background "red1" :foreground "black" :weight bold :box (:line-width 2 :style released-button))
+      ("STRT" :background "yellow" :foreground "black" :weight bold :box (:line-width 2 :style released-button))
+      ("PAUS" :background "lightblue" :foreground "black" :weight bold :box (:line-width 2 :style released-button))
+      ("DELG" :background "gold" :foreground "black" :weight bold :box (:line-width 2 :style released-button))
+      ("MAYB" :background "gray" :foreground "black" :weight bold :box (:line-width 2 :style released-button))
+      ("APPT" :background "orange" :foreground "black" :weight bold :box (:line-width 2 :style released-button))
+      ("DONE" :background "forest green" :weight bold :box (:line-width 2 :style released-button))
+      ("CANC" :background "lime green" :foreground "black" :weight bold :box (:line-width 2 :style released-button))
+      ("ABDN" :background "lime green" :foreground "black" :weight bold :box (:line-width 2 :style released-button))))
 
-  (with-eval-after-load 'org
+ (with-eval-after-load 'org
     (setq org-startup-indented t) ; Enable `org-indent-mode' by default
     (add-hook 'org-mode-hook #'visual-line-mode) ; Enable visual line mode in org by default
     )
