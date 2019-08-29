@@ -389,8 +389,12 @@ you should place your code here."
   ;; auto-disable hl-todo-mode
   (add-hook 'org-mode-hook (lambda () (hl-todo-mode -1)))
 
+  ;; persistent org-clock
   (setq org-clock-persist 'history)
   (org-clock-persistence-insinuate)
+
+  ;; bind SPC a o g to org-goto-clock
+  (spacemacs/set-leader-keys "aog" 'org-clock-goto)
 
 )
 ;; Do not write anything past this comment. This is where Emacs will
